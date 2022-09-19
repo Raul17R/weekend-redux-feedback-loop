@@ -18,6 +18,15 @@ const feeling = (state = 0, action) =>{
     return state;
 }
 
+const understanding = (state = 0, action) =>{
+    if(action.type === 'SET_UNDERSTANDING'){
+        return action.payload;
+    }else if(action.type === 'CLEAR_ALL'){
+        return '';
+    }
+    return state;
+}
+
 
 
 
@@ -29,6 +38,7 @@ const storeInstance = createStore(
     combineReducers(
         {
             feeling,
+            understanding,
         }
     )
 )
