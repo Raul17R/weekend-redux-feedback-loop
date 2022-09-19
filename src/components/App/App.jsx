@@ -7,6 +7,7 @@ import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx'
 import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
+import Summary from '../Summary/Summary.jsx';
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
                   <Route exact path = "/comments">
                     <Comments />
                   </Route>
+                    <Route exact path = "/summary">
+                      <Summary />
+                    </Route>
           </div>
       </Router>
     </div>
