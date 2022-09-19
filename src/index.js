@@ -57,6 +57,7 @@ const storeInstance = createStore(
             feeling,
             understanding,
             supported,
+            comments,
         }
     )
 )
