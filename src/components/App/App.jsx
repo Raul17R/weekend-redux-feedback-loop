@@ -11,9 +11,12 @@ function App() {
     <div className='App'>
       <Router>
         <Header />
+        <Feeling />
         <br />
           <div>
-            
+            {/* <Route exact path="/feeling"> */}
+              
+            {/* </Route> */}
           </div>
       </Router>
     </div>
