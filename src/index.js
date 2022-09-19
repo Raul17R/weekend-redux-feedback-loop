@@ -27,6 +27,23 @@ const understanding = (state = 0, action) =>{
     return state;
 }
 
+const supported = (state = 0, action) =>{
+    if(action.type === 'SET_SUPPORTED'){
+        return action.payload;
+    }else if (action.type === 'CLEAR_ALL'){
+        return '';
+    }
+    return state;
+}
+
+const comments = (state = '', action) => {
+    if(action.type === 'SET_COMMENTS'){
+        return action.payload;
+    }else if (action.type === 'CLEAR_ALL'){
+        return '';
+    }
+    return state;
+}
 
 
 
@@ -39,6 +56,7 @@ const storeInstance = createStore(
         {
             feeling,
             understanding,
+            supported,
         }
     )
 )
