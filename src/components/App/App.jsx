@@ -8,6 +8,7 @@ import Understanding from '../Understanding/Understanding.jsx'
 import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Summary from '../Summary/Summary.jsx';
+import Success from '../Success/Success.jsx'
 
 function App() {
 
@@ -32,6 +33,9 @@ function App() {
                     <Route exact path = "/summary">
                       <Summary />
                     </Route>
+                      <Route exact path = "/success">
+                        <Success />
+                      </Route>
           </div>
       </Router>
     </div>

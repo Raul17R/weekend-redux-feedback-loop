@@ -22,7 +22,7 @@ const Summary = () => {
             }
         }).then((response) => {
             dispatch ({type: 'CLEAR_ALL'});
-            history.push('/');
+            history.push('/success');
         }).catch((err) =>{
             console.log('Theres an error in POST',err);
         })

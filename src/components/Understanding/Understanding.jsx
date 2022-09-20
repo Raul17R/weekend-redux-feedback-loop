@@ -9,11 +9,20 @@ const understanding = () =>{
     const handleChange = (event) =>{
         dispatch ({type: 'SET_UNDERSTANDING', payload: event.target.value});
     }
+    const handleClick = (event) =>{
+        
+        if(understanding === ''){
+            alert('please enter data');
+
+        }else{
+            history.push('/supported');
+        }
+    }
     return (
         <>
             <h3>How well are you understanding the content?</h3>
             <input value={understanding} onChange={handleChange} className="input" type="number" />
-            <button onClick={() => history.push('/supported')} className='button'>Next</button>
+            <button onClick={handleClick} className='button'>Next</button>
             
         </>
     )

@@ -7,14 +7,29 @@ const Feeling = () =>{
     const dispatch = useDispatch();
 
     const handleChange = (event) =>{
+        // let [feelings, setFeeling] = useState ();
         dispatch ({type: 'SET_FEELING', payload: event.target.value});
+        
+        
     }
+    const handleClick = (event) =>{
+        
+        if(feeling === ''){
+            alert('please enter data');
+
+        }else{
+            history.push('/understanding');
+        }
+    }
+   
     return (
         <>
             <h3>How are you feeling today?</h3>
             <div>
                 <input value={feeling} onChange={handleChange} className="input" type="number" />
-                <button onClick={() => history.push('/understanding')} className="button">Next</button>
+                
+                <button onClick={handleClick} className="button">Next</button>
+                {/* history.push('/understanding') */}
             </div>
         </>
     )

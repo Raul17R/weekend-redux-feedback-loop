@@ -9,6 +9,7 @@ const Comments = () =>{
     const handleChange = (event) =>{
         dispatch ({type: 'SET_COMMENTS', payload: event.target.value});
     }
+    
     return (
         <>
             <h3>Any comments you want to leave?</h3>    
